@@ -1,0 +1,1 @@
+#include "MTable_EquipmentItem.h"
