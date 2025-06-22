@@ -1,6 +1,6 @@
 # ProjectM_Source
 <details>
-  <summary>Table Load 및 파싱 코드 열기</summary> 
+  <summary>클릭해서 Table Load 및 파싱 코드 열기</summary> 
 
   ```cpp
   void UMDataTableManager::LoadDataTables()
