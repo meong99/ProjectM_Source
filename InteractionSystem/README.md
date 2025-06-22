@@ -1,6 +1,12 @@
-# ProjectM_Source
+# 데이터 관리 시스템
+![image](https://github.com/user-attachments/assets/8172e4b0-cbbc-41ae-8047-d76d1f24afc0)
+
+
+위 사진은 데이터 관리 시스템의 흐름을 나타내고 각 흐름별 주요 코드는 아래에 추가되어있습니다.
+
+
 <details>
-  <summary>클릭해서 Table Load 및 파싱 코드 열기</summary> 
+  <summary>클릭해서 데이터테이블 에셋 로드 및 파싱 코드 열기</summary> 
 
   ```cpp
   void UMDataTableManager::LoadDataTables()
@@ -101,4 +107,57 @@
       }
   }
 ```
+</details>
+<details>
+  <summary>클릭해서 데이터 요청 및 탐색 코드 열기</summary> 
+
+  ```cpp
+//데이터 요청
+UPMInventoryItemDefinition* UPMInventoryManagerComponent::GetItemDefCDO(const int32 ItemRowId)
+{
+	UPMInventoryItemDefinition* ItemCDO = nullptr;
+
+	UMDataTableManager* TableManager = GEngine->GetEngineSubsystem<UMDataTableManager>();
+	if (TableManager)
+	{
+		ItemCDO = UMDataTableManager::GetDefinitionObject<UPMInventoryItemDefinition>(this, ItemRowId);
+	}
+
+	return ItemCDO;
+}
+
+
+// 데이터 탐색
+template<class T>
+T* UMDataTableManager::GetDefinitionObject(UObject* WorldContext, const int32 RowId)
+{
+	return DuplicateObject<T>(GetDefinitionDefaultObject<T>(WorldContext, RowId), WorldContext);
+}
+
+template<class T>
+T* UMDataTableManager::GetDefinitionDefaultObject(UObject* WorldContext, const int32 RowId)
+{
+	UMDataTableManager* TableManager = GEngine->GetEngineSubsystem<UMDataTableManager>();
+
+	if (TableManager)
+	{
+		const UDataTable* Table = TableManager->GetDataTable(RowId);
+		if (Table)
+		{
+			int32 ElementIndex = UMDataTableManager::ChangeRowIdToElementId(RowId) - 1;
+			const TArray<FName>& Names = Table->GetRowNames();
+			if (Names.IsValidIndex(ElementIndex))
+			{
+				FMTable_TableBase* RowData = Table->FindRow<FMTable_TableBase>(Names[ElementIndex], Names[ElementIndex].ToString());
+				if (RowData && RowData->Definition)
+				{
+					return RowData->Definition->GetDefaultObject<T>();
+				}
+			}
+		}
+	}
+
+	return nullptr;
+}
+  ```
 </details>
