@@ -173,8 +173,8 @@ T* UMDataTableManager::GetDefinitionDefaultObject(UObject* WorldContext, const i
 </ul>
   주요 코드 링크
     <ul>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/DataManagementSystem/MDataTableManager.cpp">MDataTableManager.cpp</a></li>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/DataManagementSystem/MDataTableManager.h">MDataTableManager.h</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/System/MDataTableManager.cpp">MDataTableManager.cpp</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/System/MDataTableManager.h">MDataTableManager.h</a></li>
     </ul>
   <hr>
 </details>
@@ -334,8 +334,8 @@ void UMViewportClient::ApplyWidgetLayout()
   </ul>
     주요 코드 링크
     <ul>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/UIManagementSystem/MViewportClient.cpp">MViewportClient.cpp</a></li>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/UIManagementSystem/MViewportClient.h">MViewportClient.h</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/UI/MViewportClient.cpp">MViewportClient.cpp</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/UI/MViewportClient.h">MViewportClient.h</a></li>
     </ul>
   <hr>
 </details>
@@ -434,8 +434,8 @@ void UMInteractiveAction_OnInteractionBase::ActivateAction()
   </ul>
   주요 코드 링크
     <ul>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/InteractionSystem/MInteractionComponent.cpp">MInteractionComponent.cpp</a></li>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/InteractionSystem/MInteractionComponent.h">MInteractionComponent.h</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/Interaction/MInteractionComponent.cpp">MInteractionComponent.cpp</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/Interaction/MInteractionComponent.h">MInteractionComponent.h</a></li>
     </ul>
   <hr>
 </details>
@@ -561,10 +561,10 @@ FMItemHandle FPMInventoryItemList::AddEntry(TSubclassOf<UPMInventoryItemDefiniti
 
   주요 코드 링크
     <ul>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/InventorySystem/Inventory/PMInventoryManagerComponent.cpp">PMInventoryManagerComponent.cpp</a></li>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/InventorySystem/Inventory/PMInventoryManagerComponent.h">PMInventoryManagerComponent.h</a></li>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/InventorySystem/Inventory/PMInventoryItemList.cpp">PMInventoryItemList.cpp</a></li>
-      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/InventorySystem/Inventory/PMInventoryItemList.h">PMInventoryItemList.h</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/Inventory/PMInventoryManagerComponent.cpp">PMInventoryManagerComponent.cpp</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/Inventory/PMInventoryManagerComponent.h">PMInventoryManagerComponent.h</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/Inventory/PMInventoryItemList.cpp">PMInventoryItemList.cpp</a></li>
+      <li><a href="https://github.com/meong99/ProjectM_Source/blob/main/Inventory/PMInventoryItemList.h">PMInventoryItemList.h</a></li>
     </ul>
     
   <hr>
